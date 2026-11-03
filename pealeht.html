@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marie ilutuba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            color: #443b36;
+            background-color: #eee9e2;
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, #ffffff35 3px, #ffffff35 4px),
+                              repeating-linear-gradient(90deg, transparent, transparent 3px, #b6a99712 3px, #b6a99712 4px);
+            font-family: "Lato", Arial, sans-serif;
+        }
+
+        .leht {
+            width: min(100% - 64px, 1000px);
+            margin: 64px auto;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            color: #322c29;
+            font-family: "Great Vibes", "Segoe Script", cursive;
+            font-size: clamp(36px, 5vw, 58px);
+            font-weight: normal;
+            line-height: 1.35;
+        }
+
+        .veerud {
+            display: grid;
+            grid-template-columns: 1.22fr 1fr;
+            gap: 28px;
+        }
+
+        nav, .sotsiaalmeedia {
+            min-height: 66px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: inherit;
+            font-family: "Oswald", "Arial Narrow", sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+        a:focus-visible { outline: 2px solid #776655; outline-offset: 6px; }
+
+        .galerii, .kaart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #93867b;
+            background: #fffdf9b3;
+            text-align: center;
+        }
+
+        .galerii { min-height: 375px; position: relative; overflow: hidden; }
+        .galerii img { display: block; width: 100%; height: 375px; object-fit: cover; }
+        .galerii .galerii-tekst {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 36px 20px 20px;
+            color: white;
+            background: linear-gradient(transparent, #322c29d9);
+        }
+        .galerii .galerii-tekst h2 { padding: 0; font-size: 36px; }
+        .galerii-tekst p { margin: 6px 0 0; font-size: 14px; }
+        .kaart { min-height: 205px; overflow: hidden; }
+        .kaart iframe { display: block; width: 100%; height: 205px; border: 0; }
+
+        .galerii h2, .kaart h2 {
+            margin: 0;
+            padding: 20px;
+            font-family: "Great Vibes", "Segoe Script", cursive;
+            font-size: 32px;
+            font-weight: normal;
+        }
+
+        .kaart h2 { font-size: 26px; }
+        .sotsiaalmeedia { justify-content: center; gap: 24px; }
+
+        .sotsiaalikoon {
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #93867b;
+            border-radius: 50%;
+            color: #443b36;
+            background: #fffdf966;
+        }
+
+        .sotsiaalikoon svg { width: 25px; height: 25px; }
+        a.sotsiaalikoon:hover { background: #fffdf9; }
+        .facebook { font: bold 32px Arial, sans-serif; }
+        .tumblr { font: bold 32px Georgia, serif; text-decoration: none; }
+
+        .kontakt {
+            padding: 16px 8px;
+            text-align: center;
+            font-family: "Lato", Arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .kontakt p { margin: 0 0 5px; }
+        .kontakt address { margin-bottom: 5px; font-style: normal; }
+        .kontakt h2 {
+            margin: 0 0 6px;
+            font: normal 30px "Great Vibes", "Segoe Script", cursive;
+        }
+        .kontakt .ajad { margin: 12px auto 0; font-size: 15px; }
+        .ajad th { padding-right: 25px; text-align: left; font-weight: normal; }
+        .ajad td { text-align: right; }
+        .kontakt small { display: block; margin-top: 14px; font-size: 11px; color: #786d64; }
+
+        @media (max-width: 640px) {
+            .leht { width: calc(100% - 36px); margin: 28px auto; }
+            .veerud { grid-template-columns: 1fr; gap: 14px; }
+            nav { gap: 22px; }
+            nav a { font-size: 18px; }
+            .galerii { min-height: 300px; }
+            .galerii img { height: 300px; }
+            .kaart { min-height: 205px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="leht">
+        <header>
+            <h1>Marie ilutuba</h1>
+        </header>
+
+        <main class="veerud">
+            <div>
+                <nav aria-label="Peamenüü">
+                    <!-- Eraldi lehtede failinimed; nende sisu lisatakse hiljem. -->
+                    <a href="hinnakiri.html">HINNAKIRI</a>
+                    <a href="broneeri.html">BRONEERI AEG</a>
+                </nav>
+                <section class="galerii" aria-labelledby="galerii-pealkiri">
+                    <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Hele ilusalongi interjöör peeglite ja juuksuritoolidega" width="1200" height="850">
+                    <div class="galerii-tekst">
+                        <h2 id="galerii-pealkiri">Hetk iseendale</h2>
+                        <p>Juuksehooldus · maniküür · iluhoolitsused</p>
+                    </div>
+                </section>
+            </div>
+
+            <aside aria-label="Asukoht ja kontakt">
+                <div class="sotsiaalmeedia" aria-label="Sotsiaalmeedia">
+                    <!-- Näidise nõudel on klõpsatav ainult Tumblr. -->
+                    <span class="sotsiaalikoon" role="img" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                    </span>
+                    <span class="sotsiaalikoon facebook" role="img" aria-label="Facebook">f</span>
+                    <a class="sotsiaalikoon tumblr" href="https://unsplash.tumblr.com/" target="_blank" rel="noopener noreferrer" aria-label="Vaata pilte Tumblris (avaneb uuel vahelehel)">t</a>
+                </div>
+
+                <!-- Näidisaadress: tegemist ei ole päris salongi asukohaga. -->
+                <section class="kaart" aria-label="Google Maps: näidisasukoht Tartus">
+                    <iframe title="Näidisaadress Rüütli 12, Tartu Google Mapsis"
+                        src="https://www.google.com/maps?q=R%C3%BC%C3%BCtli%2012%2C%20Tartu%2C%20Estonia&amp;z=16&amp;output=embed"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </section>
+                <div class="kontakt">
+                    <h2>Ootame Sind külla!</h2>
+                    <address>Rüütli 12, Tartu</address>
+                    <table class="ajad" aria-label="Lahtiolekuajad">
+                        <tbody>
+                            <tr><th scope="row">E–R</th><td>09.00–18.00</td></tr>
+                            <tr><th scope="row">L</th><td>10.00–15.00</td></tr>
+                            <tr><th scope="row">P</th><td>Suletud</td></tr>
+                        </tbody>
+                    </table>
+                    <small>Õppeprojekti näidissalong. Andmed on väljamõeldud, foto on illustratiivne.</small>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
